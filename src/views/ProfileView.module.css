@@ -1,0 +1,110 @@
+.wrapper{
+    padding: 40px 100px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 83vh;
+    background: rgb(255,146,22);
+background: -moz-linear-gradient(-45deg,  rgba(255,146,22,1) 0%, rgba(249,249,114,1) 22%, rgba(255,255,255,1) 50%, rgba(249,249,114,1) 76%, rgba(255,146,22,1) 100%);
+background: -webkit-linear-gradient(-45deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 22%,rgba(255,255,255,1) 50%,rgba(249,249,114,1) 76%,rgba(255,146,22,1) 100%);
+background: linear-gradient(135deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 22%,rgba(255,255,255,1) 50%,rgba(249,249,114,1) 76%,rgba(255,146,22,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9216', endColorstr='#ff9216',GradientType=1 );
+
+
+}
+.user_info{
+    border: 2px solid rgb(255, 146, 22);
+    border-radius: 15px;
+    width: 370px;
+    height: 400px;
+    background-color: #fff;
+}
+.header_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 146, 22);
+    border: 2px solid rgb(255, 146, 22);
+    border-radius: 11px 11px 0 0;
+}
+.h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+.user_card{
+    padding: 10px 10px 10px 20px;
+    font-size: 18px;
+}
+.section{
+    margin: 30px 0;
+}
+.label_name{
+    font-weight: 700;
+    text-decoration: underline;
+}
+.label_value{
+    margin-left: 25px;
+}
+.button{
+    display: block;
+    width: 250px;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: rgb(255, 146, 22);
+    background-color: #fff;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.1s;
+}
+.button:hover{
+    background-color: rgb(255, 146, 22);
+    color: #fff;
+    box-shadow: 0 -3px rgb(221, 133, 32) inset;
+    border: 1px solid rgb(255, 146, 22);
+}
+.button:active{
+    background: rgb(226, 137, 34);
+    box-shadow: 0 3px rgb(226, 137, 34) inset;
+}
+.profile_button{
+    display: block;
+    width: 160px;
+    font-size: 16px;
+    height: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: rgb(255, 146, 22);
+    background-color: #fff;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.1s;
+}
+.profile_button:hover{
+    background-color: rgb(255, 146, 22);
+    color: #fff;
+    box-shadow: 0 -3px rgb(233, 133, 18) inset;
+    border: 1px solid rgb(255, 146, 22);
+}
+.profile_button:active{
+    background: rgb(230, 132, 20);
+    box-shadow: 0 3px rgb(230, 132, 20) inset;
+}
+.calculate{
+    border: 2px solid rgb(255, 146, 22);
+    border-radius: 15px;
+    width: 650px;
+    margin-top: 60px;
+    background-color: #fff;
+}
+.calculate_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+.img{
+    width: 180px;
+    height: 180px;
+    margin-bottom: 15px;
+}
+.left_container{
+    padding-left: 10px;
+}

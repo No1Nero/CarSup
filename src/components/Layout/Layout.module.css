@@ -1,0 +1,68 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid rgb(255, 146, 22);
+    height: 10vh;
+    
+}
+.img_wrapper{
+    padding: 10px 10px 10px 30px;
+}
+.logo{
+    height: 70px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    padding: 10px 70px 10px 0;
+}
+.navlink{
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
+}
+.profile_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile_img{
+    width: 49px;
+}
+.profile_link{
+    height: 49px;
+}
+.profile_username{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.form{
+    width: 50px;
+}
+.login_button{
+    font-size: 19px;
+    padding: 3px 4px;
+    border-radius: 8px;
+    color: rgb(255, 146, 22);
+    height: 38px;
+    width: 70px;
+    background-color: #fff;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.1s;
+    cursor: pointer;
+}
+.login_button:hover{
+    background-color: rgb(255, 146, 22);
+    color: #fff;
+    box-shadow: 0 -2px rgb(233, 133, 18) inset;
+    border: 1px solid rgb(255, 146, 22);
+}
+.login_button:active{
+    background: rgb(230, 132, 20);
+    box-shadow: 0 3px rgb(230, 132, 20) inset;
+}

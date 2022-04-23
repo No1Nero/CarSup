@@ -1,0 +1,25 @@
+.form{
+    border: 2px solid rgb(255, 146, 22);
+    border-radius: 8px;
+}
+.section{
+    padding: 7px 0 7px 20px;
+}
+.container{
+    width: 50%;
+}
+.price_input{
+    width: 80px;
+}
+.price_input::-webkit-outer-spin-button,
+.price_input::-webkit-inner-spin-button{
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+.price_container{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    width: 90%;
+}

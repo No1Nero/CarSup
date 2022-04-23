@@ -1,0 +1,10 @@
+.wrapper{
+    border: 2px solid rgb(255, 146, 22);
+    border-radius: 15px;
+    width: 70%;
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

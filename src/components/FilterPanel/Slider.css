@@ -1,0 +1,24 @@
+.multi-range-slider{
+    border: none;
+    border-radius: none;
+    box-shadow:none
+}
+.multi-range-slider .bar-inner{
+    background-color: rgb(255, 146, 22);
+    border: none;
+    box-shadow: none;
+}
+.multi-range-slider .bar-inner-left{
+    width: 100%;
+}
+.multi-range-slider .thumb::before{
+    width: 15px;
+    height: 15px;
+    margin: -4px;
+    border: 1px solid rgb(255, 146, 22);
+}
+.multi-range-slider .thumb *{
+    width: 0;
+    height: 0;
+    font-size: 0;
+}

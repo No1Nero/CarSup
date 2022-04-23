@@ -1,0 +1,94 @@
+.section_button{
+    display: flex;
+    align-items: center;
+    height: 40vh;
+    border-bottom: 2px solid #000;
+    background: rgb(255,146,22);
+    background: -moz-linear-gradient(45deg,  rgba(255,146,22,1) 0%, rgba(249,249,114,1) 31%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(45deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 31%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(45deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 31%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9216', endColorstr='#ffffff',GradientType=1 );
+}
+.home_auth_div{
+    background: rgb(255,146,22);
+    background: -moz-linear-gradient(-45deg,  rgba(255,146,22,1) 0%, rgba(249,249,114,1) 31%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(-45deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 31%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(135deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 31%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9216', endColorstr='#ffffff',GradientType=1 );
+
+}
+.form_button{
+    width: 100%;
+    text-align: center;
+}
+.button{
+    width: 300px;
+    height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(255, 146, 22);
+    background-color: #fff;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.1s;
+    font-size: 20px;
+    font-weight: 700;
+}
+.button:hover{
+    background-color: rgb(255, 146, 22);
+    color: #fff;
+    box-shadow: 0 -3px rgb(233, 133, 18) inset;
+    border: 1px solid rgb(255, 146, 22);
+}
+.button:active{
+    background: rgb(230, 132, 20);
+    box-shadow: 0 3px rgb(230, 132, 20) inset;
+}
+.div_buttons{
+    width: 21,5%;
+    margin: auto;
+    text-align: center;
+}
+.toggle_button{
+    width: 130px;
+    height: 60px;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    color: rgb(255, 146, 22);
+    border-bottom: 2px solid rgb(255, 146, 22);
+    cursor: pointer;
+}
+.toggle_left_button{
+    composes: toggle_button;
+    border-left: 2px solid rgb(255, 146, 22);
+    border-right: 1px solid rgb(255, 146, 22);
+    border-radius: 0 0 0 8px;
+}
+.toggle_right_button{
+    composes: toggle_button;
+    border-left: 1px solid rgb(255, 146, 22);
+    border-right: 2px solid rgb(255, 146, 22);
+    border-radius: 0 0 8px 0;
+}
+.toggle_button:disabled{
+    background: rgb(255, 146, 22);
+    color: #fff;
+}
+.section_authed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    background: rgb(255,146,22);
+    background: -moz-linear-gradient(-45deg,  rgba(255,146,22,1) 0%, rgba(249,249,114,1) 31%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(-45deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 31%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(135deg,  rgba(255,146,22,1) 0%,rgba(249,249,114,1) 31%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9216', endColorstr='#ffffff',GradientType=1 );
+    height: 42.8vh;
+}
+.h2_authed{
+    font-size: 26px;
+    color: #000;
+    text-decoration: underline;
+}

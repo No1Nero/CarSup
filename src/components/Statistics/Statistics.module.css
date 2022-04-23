@@ -1,0 +1,11 @@
+.wrapper{
+    padding-bottom: 50px;
+}
+.container{
+    width: 70%;
+    height: 350px;
+    border: 2px solid rgb(255, 146, 22);
+    padding: 15px 0 15px 20px;
+    border-radius: 15px;
+    background-color: #fff;
+}
