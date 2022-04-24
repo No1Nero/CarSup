@@ -4,7 +4,7 @@
     align-items: center;
     border-bottom: 4px solid rgb(255, 146, 22);
     height: 10vh;
-    
+    background: url('../../img/layout.png');
 }
 .img_wrapper{
     padding: 10px 10px 10px 30px;
