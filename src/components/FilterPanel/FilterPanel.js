@@ -1,14 +1,7 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import s from './FilterPanel.module.css';
+import carsApi from "services/cars-api";
 import Slider from "./Slider";
-
-const mockType = [
-    'ATV',
-    'AUTOMOBILE',
-    'BOAT',
-    'DIRT BIKE',
-    'HEAVY DUTY TRUCKS',
-];
 
 const mockMark = [
     'TOYOTA',
@@ -22,6 +15,12 @@ const mockMark = [
 export default function FilterPanel() {
     const [minValue, setMinValue] = useState(30000);
     const [maxValue, setMaxValue] = useState(80000);
+
+    const [vehicleTypes, setVehicleTypes] = useState([]);
+
+    useEffect(() => {
+        carsApi.fetchVehicleTypes({setState: setVehicleTypes});
+    }, []);
 
     const handleChange = e => {
         const {name, value} = e.target;
@@ -45,7 +44,7 @@ export default function FilterPanel() {
                 <section className={s.section}>
                     <span>Тип  </span>
                     <select>
-                        {mockType.map((type) => {
+                        {vehicleTypes.map((type) => {
                             return (
                                 <option key={type}>
                                     {type}

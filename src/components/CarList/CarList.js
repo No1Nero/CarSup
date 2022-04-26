@@ -3,7 +3,7 @@ import carsApi from "services/cars-api";
 import CarCard from "./CarCard";
 import s from './CarList.module.css';
 
-export default function CarList({nameLink, fetchId}) {
+export default function CarList({nameLink, fetchId, buttonCount = null}) {
     const [autos, setAutos] = useState([]);
 
     useEffect(() => {

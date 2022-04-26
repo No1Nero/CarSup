@@ -36,7 +36,7 @@ export default function Company() {
                     </div>
                 </div>
                 <div className={s.info_box}>
-                    <div className={s.info_box_header_wrapper}>
+                    <div className={s.info_box_header_wrapper_dop}>
                         <h2>Информация о дополнительных возможностях</h2>
                     </div>
                     <div className={s.info_box_info_div}>

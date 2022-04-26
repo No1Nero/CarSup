@@ -3,7 +3,7 @@ import s from './CarInfo.module.css';
  export default function CarInfo({car}) {
     const {brand, model, series, engine, fuelType, vehicleType, 
         auctionName, carYear, saleDate, lotNumber, auctionDate, 
-        buyNowPrice, ukrainianDate, canBuyNow, url} = car;
+        buyNowPrice, ukrainianDate, canBuyNow, currentBid, url} = car;
 
      return (
         <>
@@ -29,8 +29,8 @@ import s from './CarInfo.module.css';
                     <label>{series ? series : '—'}</label>
                 </section>
                 <section className={s.section}>
-                    <label>Двигатель:</label>
-                    <label>{engine ? engine : '—'}</label>
+                    <label>Объем двигателя:</label>
+                    <label>{engine ? engine : '—'} L</label>
                 </section>
                 <section className={s.section}>
                     <label>Тип топлива:</label>
@@ -53,7 +53,7 @@ import s from './CarInfo.module.css';
                 </section>
                 <section className={s.section}>
                     <label>Цена покупки:</label>
-                    <label>{buyNowPrice ? buyNowPrice : '—'}</label>
+                    <label>{buyNowPrice ? buyNowPrice : '—'} $</label>
                 </section>
                 <section className={s.section}>
                     <label>Дата продажи:</label>
@@ -65,6 +65,10 @@ import s from './CarInfo.module.css';
                         <p>{auctionDate ? auctionDate : '—'}</p>
                         <p>{ukrainianDate ? ukrainianDate : '—'}</p>
                     </div>
+                </section>
+                <section className={s.section}>
+                    <label>Текущая ставка:</label>
+                    <label>{currentBid ? currentBid : '—'} $</label>
                 </section>
                 <section className={s.section}>
                     <label>Номер лота:</label>

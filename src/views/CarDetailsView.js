@@ -4,7 +4,6 @@ import carsApi from "services/cars-api";
 import s from './CarDetailsView.module.css';
 import CarFront from "components/CarDetailsComponents/CarFront";
 import Calculator from "components/Сalculator/Calculator";
-import Statistics from "components/Statistics/Statistics";
 
 export default function CarDetailsView() {
     const{id} = useParams();
@@ -19,10 +18,7 @@ export default function CarDetailsView() {
         <div className={s.wrapper}>
             {car && <CarFront car={car} />}
             <div className={s.calculator}>
-                <Calculator />
-            </div>
-            <div>
-                <Statistics />
+                {car && <Calculator car={car} />}
             </div>
         </div>
     );
