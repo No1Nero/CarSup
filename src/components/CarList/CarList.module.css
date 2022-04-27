@@ -1,12 +1,13 @@
 .list_container{
     width: 100%;
+    margin-top: -42px;
 }
 .ul{
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    margin-left: 50px;
+
 }
 .li{
     padding: 10px;

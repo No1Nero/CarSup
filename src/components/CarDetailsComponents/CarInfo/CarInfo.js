@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import s from './CarInfo.module.css';
+import fav from '../../../img/fav.png';
+import no_fav from '../../../img/no_fav.png';
+
  export default function CarInfo({car}) {
     const {brand, model, series, engine, fuelType, vehicleType, 
         auctionName, carYear, saleDate, lotNumber, auctionDate, 
         buyNowPrice, ukrainianDate, canBuyNow, currentBid, url} = car;
 
-     return (
+    const [toggler, setToggler] = useState(false);
+
+    const changeToggler = () => {
+        setToggler(toggler => !toggler);
+    };
+
+    return (
         <>
         <div className={s.wrapper_params}>
             <div className={s.header_container}>
-                <h2 className={s.h2}>Характеристики автобомиля</h2>
+                <section>
+                    <h2 className={s.h2}>Характеристики автобомиля</h2>
+                    {toggler ? 
+                        <img onClick={changeToggler} className={s.fav_img} alt="#" src={fav} /> : 
+                        <img onClick={changeToggler} className={s.no_fav_img} alt="#" src={no_fav} />
+                    }
+                </section>
             </div>
             <div className={s.container}>
                 <section className={s.section}>

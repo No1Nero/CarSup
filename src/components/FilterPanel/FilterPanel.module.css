@@ -6,7 +6,8 @@
     padding: 7px 0 7px 20px;
 }
 .container{
-    width: 50%;
+    width: 60%;
+    margin-right: 50px;
 }
 .price_input{
     width: 80px;

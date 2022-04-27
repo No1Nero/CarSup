@@ -14,9 +14,9 @@ export default function CarList({nameLink, fetchId, buttonCount = null}) {
     return (
         <div className={s.list_container}>
             <ul className={s.ul}>
-                {autos.map(({id, brand, img}) => (
+                {autos.map(({id, brand, vehicleType, engine, carYear, odometrValue, imageLinks}) => (
                     <li className={s.li} key={id}>
-                        <CarCard brand={brand} img={img} carLink={`${nameLink}${id}`} />
+                        <CarCard odometrValue={odometrValue} carYear={carYear} engine={engine} vehicleType={vehicleType} brand={brand} img={imageLinks[0].link} carLink={`${nameLink}${id}`} />
                     </li>
                 ))}
             </ul>

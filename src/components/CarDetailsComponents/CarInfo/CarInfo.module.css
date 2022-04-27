@@ -2,7 +2,7 @@
     border: 2px solid rgb(255, 146, 22);
     border-radius: 15px;
     margin-left: 30px;
-    width: 500px;
+    width: 480px;
     background-color: #fff;
 }
 .wrapper_conditional{
@@ -16,11 +16,14 @@
     background-color: rgb(255, 146, 22);
     border-radius: 8px 8px 0 0;
     color: #000;
+    height: 70px;
 }
 .h2{
     font-size: 24px;
     font-weight: 700;
     text-align: center;
+    display: inline-block;
+    margin-left: 50px;
 }
 .container{
     padding: 10px 15px 10px 15px;
@@ -30,4 +33,18 @@
     justify-content: space-between;
     font-size: 18px;
     padding: 10px 0;
+}
+.fav_img{
+    height: 50px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: -1px;
+    border-radius: 0 8px 0 0;
+}
+.no_fav_img{
+    height: 60px;
+    width: 30px;
+    margin-bottom: -10px;
+    margin-left: 20px;
+    border-radius: 0 8px 0 0;
 }
