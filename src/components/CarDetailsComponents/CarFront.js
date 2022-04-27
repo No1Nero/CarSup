@@ -8,7 +8,7 @@ export default function CarFront({car}) {
     return (
         <div className={s.front_div}>
             <div>
-                <CarGallery />
+                <CarGallery imageLinks={car.imageLinks} />
                 <CarConditionInfo car={car} />
             </div>
             <div>
