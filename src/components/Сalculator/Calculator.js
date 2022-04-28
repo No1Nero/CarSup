@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from 'react';
+import { useSelector } from 'react-redux';
+import NoAuthCalc from './NoAuthCalc';
 import s from './Calculator.module.css';
 
 export default function Calculator({car}) {
+    const token = useSelector((state) => state.auth.user.token);
+
     const {engine, fuelType, vehicleType, carYear, buyNowPrice} = car;
     const [error, setError] = useState(null);
     const [toggler, setToggler] = useState(false);
@@ -129,31 +133,36 @@ export default function Calculator({car}) {
 
     return (
         <div className={s.wrapper}>
-            <div className={s.header_container}>
-                <h2 className={s.h2}>Расчёт стоимости растаможивания</h2>
-            </div>
-            <div className={s.container}>
-                <section className={s.section}>
-                    <label>Тип транспортного средства:</label>
-                    <label>{vehicleType ? vehicleType : '—'}</label>
-                </section>
-                <section className={s.section}>
-                    <label>Тип двигателя:</label>
-                    <label>{fuelType ? fuelType : '—'}</label>
-                </section>
-                <section className={s.section}>
-                    <label>Объем двигаетля:</label>
-                    <label>{engine ? engine : '—'} L</label>
-                </section>
-                <section className={s.section}>
-                    <label>Год выпуска:</label>
-                    <label>{carYear ? carYear : '—'}</label>
-                </section>
-                <section className={s.section}>
-                    <label>Цена покупки:</label>
-                    <label>{buyNowPrice ? buyNowPrice : '—'} $</label>
-                </section>
-            </div>
+            {token ?
+                <>
+                <div className={s.header_container}>
+                    <h2 className={s.h2}>Расчёт стоимости растаможивания</h2>
+                </div>
+                <div className={s.container}>
+                    <section className={s.section}>
+                        <label>Тип транспортного средства:</label>
+                        <label>{vehicleType ? vehicleType : '—'}</label>
+                    </section>
+                    <section className={s.section}>
+                        <label>Тип двигателя:</label>
+                        <label>{fuelType ? fuelType : '—'}</label>
+                    </section>
+                    <section className={s.section}>
+                        <label>Объем двигаетля:</label>
+                        <label>{engine ? engine : '—'} L</label>
+                    </section>
+                    <section className={s.section}>
+                        <label>Год выпуска:</label>
+                        <label>{carYear ? carYear : '—'}</label>
+                    </section>
+                    <section className={s.section}>
+                        <label>Цена покупки:</label>
+                        <label>{buyNowPrice ? buyNowPrice : '—'} $</label>
+                    </section>
+                </div>
+                </> : 
+                <NoAuthCalc />
+            }
             {!toggler && <button className={s.button} onClick={() => setToggler(true)} type="button">Рассчитать</button>}
             {toggler &&
                 <div className={s.calculated_container}>

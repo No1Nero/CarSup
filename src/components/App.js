@@ -25,9 +25,9 @@ const App = () => {
                         <Route path="/company" element={<CompanyView />} />
                         <Route path="/profile" element={token ? <ProfileView /> : <Navigate replace to='/' />} />
                         <Route path="/recommendation" element={token ? <RecommendationView /> : <Navigate replace to='/'/>} />
-                        <Route path="/recommendation/:id" element={<CarDetailsView />} />
+                        <Route path="/recommendation/:id" element={token ? <CarDetailsView /> : <Navigate replace to='/' />} />
                         <Route path="/chosen" element={token ? <ChosenView /> : <Navigate replace to='/'/>} />
-                        <Route path="/chosen/:id" element={<CarDetailsView />} />
+                        <Route path="/chosen/:id" element={token ? <CarDetailsView /> : <Navigate replace to='/' />} />
                     </Route>
                 </Routes>
             </Suspense>

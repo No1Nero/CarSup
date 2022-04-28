@@ -40,6 +40,7 @@
     margin-left: 20px;
     margin-top: -1px;
     border-radius: 0 8px 0 0;
+    cursor: pointer;
 }
 .no_fav_img{
     height: 60px;
@@ -47,4 +48,5 @@
     margin-bottom: -10px;
     margin-left: 20px;
     border-radius: 0 8px 0 0;
+    cursor: pointer;
 }

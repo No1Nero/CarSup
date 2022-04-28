@@ -1,16 +1,21 @@
 import React, {useState, useEffect} from "react";
+import { useSelector } from "react-redux";
 import carsApi from "services/cars-api";
 import CarCard from "./CarCard";
 import s from './CarList.module.css';
 
 export default function CarList({nameLink, fetchId, buttonCount = null}) {
+    const token = useSelector((state) => state.auth.user.token);
+
     const [autos, setAutos] = useState([]);
 
     useEffect(() => {
         if (fetchId === 99999) {
             carsApi.fetchAllCars({setState: setAutos});
+        } else if (fetchId === 88888) {
+            carsApi.fetchFavouriteCars({token: token, setState: setAutos});
         }
-    }, [fetchId]);
+    }, [fetchId, token]);
     return (
         <div className={s.list_container}>
             <ul className={s.ul}>

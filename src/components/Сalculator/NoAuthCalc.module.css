@@ -1,0 +1,9 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alert{
+    font-size: 24px;
+    color: red;
+}

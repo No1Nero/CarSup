@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import s from './CarInfo.module.css';
 import fav from '../../../img/fav.png';
 import no_fav from '../../../img/no_fav.png';
+import { useSelector } from "react-redux";
 
- export default function CarInfo({car}) {
+ export default function CarInfo({car, addToFav, removeFromFav}) {
     const {brand, model, series, engine, fuelType, vehicleType, 
         auctionName, carYear, saleDate, lotNumber, auctionDate, 
-        buyNowPrice, ukrainianDate, canBuyNow, currentBid, url} = car;
+        buyNowPrice, ukrainianDate, canBuyNow, currentBid, url, favForUser} = car;
 
-    const [toggler, setToggler] = useState(false);
-
-    const changeToggler = () => {
-        setToggler(toggler => !toggler);
-    };
+    const token = useSelector((state) => state.auth.user.token);
 
     return (
         <>
@@ -20,9 +17,13 @@ import no_fav from '../../../img/no_fav.png';
             <div className={s.header_container}>
                 <section>
                     <h2 className={s.h2}>Характеристики автобомиля</h2>
-                    {toggler ? 
-                        <img onClick={changeToggler} className={s.fav_img} alt="#" src={fav} /> : 
-                        <img onClick={changeToggler} className={s.no_fav_img} alt="#" src={no_fav} />
+                    {token &&
+                        <>
+                        {favForUser ? 
+                            <img onClick={removeFromFav} className={s.fav_img} alt="#" src={fav} /> : 
+                            <img onClick={addToFav} className={s.no_fav_img} alt="#" src={no_fav} />
+                        }
+                        </>
                     }
                 </section>
             </div>
@@ -102,7 +103,7 @@ import no_fav from '../../../img/no_fav.png';
                 </section>
                 <section className={s.section}>
                     <label>Ссылка на источник:</label>
-                    <a target="_blank" rel="noreferrer" href={`https://www.iaai.com/${url.url}`}>Перейти на сайт-источник</a>
+                    <a target="_blank" rel="noreferrer" href={`https://www.iaai.com/${url}`}>Перейти на сайт-источник</a>
                 </section>
             </div>
          </div>
