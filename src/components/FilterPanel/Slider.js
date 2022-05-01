@@ -2,7 +2,7 @@ import React from "react";
 import MultiRangeSlider from "multi-range-slider-react";
 import './Slider.css';
 
-export default function Slider({min, max, OnMinChange, OnMaxChange}) {
+export default function Slider({min, max, OnMinChange, OnMaxChange, absMin, absMax, step}) {
     const handleInput = (e) => {
         OnMinChange(e.minValue);
         OnMaxChange(e.maxValue);
@@ -11,9 +11,9 @@ export default function Slider({min, max, OnMinChange, OnMaxChange}) {
     return (
         <>
         <MultiRangeSlider
-            min={10000}
-            max={100000}
-            step={1}
+            min={absMin}
+            max={absMax}
+            step={step}
             ruler={false}
             label={false}
             preventWheel={false}

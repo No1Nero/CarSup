@@ -31,12 +31,22 @@ const fetchVehicleTypes = ({setState}) => {
     .then(({data}) => setState(data));
 };
 
+const fetchFuelTypes = ({setState}) => {
+    axios.get('https://carsup.herokuapp.com/cars/fuelTypes')
+    .then(({data}) => setState(data));
+};
+
 const fetchFavouriteCars = ({token, setState}) => {
     axios.get('https://carsup.herokuapp.com/user/get_fav', {
         headers: {
             "Authorization": `Bearer_${token}`,
         },
     })
+    .then(({data}) => setState(data));
+};
+
+const filterCars = ({credentials, setState}) => {
+    axios.get(`https://carsup.herokuapp.com/cars/filter?search=${credentials}`)
     .then(({data}) => setState(data));
 };
 
@@ -78,9 +88,11 @@ const carsApi = {
     fetchCar,
     countCars,
     fetchVehicleTypes,
+    fetchFuelTypes,
     addCarToFavourite,
     removeCarFromFavourite,
     fetchFavouriteCars,
+    filterCars,
 };
 
 export default carsApi;

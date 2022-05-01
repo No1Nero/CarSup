@@ -4,7 +4,7 @@ import carsApi from "services/cars-api";
 import CarCard from "./CarCard";
 import s from './CarList.module.css';
 
-export default function CarList({nameLink, fetchId, buttonCount = null}) {
+export default function CarList({nameLink, fetchId, buttonCount = null, credentials = null}) {
     const token = useSelector((state) => state.auth.user.token);
 
     const [autos, setAutos] = useState([]);
@@ -14,8 +14,10 @@ export default function CarList({nameLink, fetchId, buttonCount = null}) {
             carsApi.fetchAllCars({setState: setAutos});
         } else if (fetchId === 88888) {
             carsApi.fetchFavouriteCars({token: token, setState: setAutos});
+        } else if (fetchId === 77777) {
+            carsApi.filterCars({credentials: credentials, setState: setAutos});
         }
-    }, [fetchId, token]);
+    }, [fetchId, token, credentials]);
     return (
         <div className={s.list_container}>
             <ul className={s.ul}>

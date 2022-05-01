@@ -8,6 +8,8 @@ import filter from '../img/filter.png';
 
 export default function BuyNowView() {
     const [toggler, setToggler] = useState(true);
+    const [carsFetchId, setCarsFetchId] = useState(99999);
+    const [credentials, setCredentials] = useState(null);
     const [countCars, setCountCars] = useState(0);
 
     useEffect(() => {
@@ -24,9 +26,9 @@ export default function BuyNowView() {
             <div className='buyNow__content'>
                 <img onClick={handleChange} className='buyNow__img' alt="#" src={filter} />
                 <CSSTransition in={toggler} timeout={300} unmountOnExit classNames="fade" >
-                    <FilterPanel />
+                    <FilterPanel setCredentials={setCredentials} setCarsFetchId={setCarsFetchId} />
                 </CSSTransition>
-                <CarList buttonCount={Math.ceil(countCars/100)} fetchId={99999} nameLink={'/autos/'}/>
+                <CarList buttonCount={Math.ceil(countCars/100)} fetchId={carsFetchId} credentials={credentials} nameLink={'/autos/'}/>
             </div>
         </div>
     );
