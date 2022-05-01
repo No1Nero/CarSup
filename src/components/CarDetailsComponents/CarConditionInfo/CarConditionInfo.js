@@ -24,7 +24,7 @@ export default function CarConditionInfo({car}) {
                 </section>
                 <section className={s.section}>
                     <label>Пробег:</label>
-                    <label>{Number(odometrValue) * 1.609} км</label>
+                    <label>{odometrValue} mi</label>
                 </section>
                 <section className={s.section}>
                     <label>Расположение:</label>

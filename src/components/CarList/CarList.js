@@ -4,20 +4,20 @@ import carsApi from "services/cars-api";
 import CarCard from "./CarCard";
 import s from './CarList.module.css';
 
-export default function CarList({nameLink, fetchId, buttonCount = null, credentials = null}) {
+export default function CarList({nameLink, fetchId, credentials = null, selectPage}) {
     const token = useSelector((state) => state.auth.user.token);
 
     const [autos, setAutos] = useState([]);
 
     useEffect(() => {
         if (fetchId === 99999) {
-            carsApi.fetchAllCars({setState: setAutos});
+            carsApi.fetchAllCars({setState: setAutos, pageNumber: selectPage});
         } else if (fetchId === 88888) {
             carsApi.fetchFavouriteCars({token: token, setState: setAutos});
         } else if (fetchId === 77777) {
             carsApi.filterCars({credentials: credentials, setState: setAutos});
         }
-    }, [fetchId, token, credentials]);
+    }, [fetchId, token, credentials, selectPage]);
     return (
         <div className={s.list_container}>
             <ul className={s.ul}>

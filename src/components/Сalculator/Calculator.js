@@ -160,58 +160,58 @@ export default function Calculator({car}) {
                         <label>{buyNowPrice ? buyNowPrice : '—'} $</label>
                     </section>
                 </div>
+                {!toggler && <button className={s.button} onClick={() => setToggler(true)} type="button">Рассчитать</button>}
+                {toggler &&
+                    <div className={s.calculated_container}>
+                        {error ? 
+                            <p className={s.error}>{error}</p> :
+                            <>
+                            <section className={s.info_section}>
+                                <section className={s.section_label}>
+                                    <label className={s.label_label}>НДС</label>
+                                </section>
+                                <section className={s.section_value}>
+                                    <label>{nds.toFixed(2)} $</label>
+                                </section>
+                            </section>
+                            <section className={s.info_section}>
+                                <section className={s.section_label}>
+                                    <label className={s.label_label}>Пошлина</label>
+                                </section>
+                                <section className={s.section_value}>
+                                    <label>{duty.toFixed(2)} $</label>
+                                </section>
+                            </section>
+                            <section className={s.info_section}>
+                                <section className={s.section_label}>
+                                    <label className={s.label_label}>Акцизный сбор</label>
+                                </section>
+                                <section className={s.section_value}>
+                                    <label>{excise.toFixed(2)} $</label>
+                                </section>
+                            </section>
+                            <section className={s.info_section}>
+                                <section className={s.section_label}>
+                                    <label className={s.label_custom}>Всего таможенных платежей</label>
+                                </section>
+                                <section className={s.section_value}>
+                                    <label className={s.label_value_duty}>{allCustomDuty.toFixed(2)} $</label>
+                                </section>
+                            </section>
+                            <section className={s.info_section}>
+                                <section className={s.section_label}>
+                                    <label className={s.label_custom}>Полная стоимость с растаможиванием</label>
+                                </section>
+                                <section className={s.section_value_last_child}>
+                                    <label className={s.label_value_duty}>{finalCost.toFixed(2)} $</label>
+                                </section>
+                            </section>
+                            </>
+                        }
+                    </div>
+                }
                 </> : 
                 <NoAuthCalc />
-            }
-            {!toggler && <button className={s.button} onClick={() => setToggler(true)} type="button">Рассчитать</button>}
-            {toggler &&
-                <div className={s.calculated_container}>
-                    {error ? 
-                        <p className={s.error}>{error}</p> :
-                        <>
-                        <section className={s.info_section}>
-                            <section className={s.section_label}>
-                                <label className={s.label_label}>НДС</label>
-                            </section>
-                            <section className={s.section_value}>
-                                <label>{nds} $</label>
-                            </section>
-                        </section>
-                        <section className={s.info_section}>
-                            <section className={s.section_label}>
-                                <label className={s.label_label}>Пошлина</label>
-                            </section>
-                            <section className={s.section_value}>
-                                <label>{duty} $</label>
-                            </section>
-                        </section>
-                        <section className={s.info_section}>
-                            <section className={s.section_label}>
-                                <label className={s.label_label}>Акцизный сбор</label>
-                            </section>
-                            <section className={s.section_value}>
-                                <label>{excise} $</label>
-                            </section>
-                        </section>
-                        <section className={s.info_section}>
-                            <section className={s.section_label}>
-                                <label className={s.label_custom}>Всего таможенных платежей</label>
-                            </section>
-                            <section className={s.section_value}>
-                                <label className={s.label_value_duty}>{allCustomDuty} $</label>
-                            </section>
-                        </section>
-                        <section className={s.info_section}>
-                            <section className={s.section_label}>
-                                <label className={s.label_custom}>Полная стоимость с растаможиванием</label>
-                            </section>
-                            <section className={s.section_value_last_child}>
-                                <label className={s.label_value_duty}>{finalCost} $</label>
-                            </section>
-                        </section>
-                        </>
-                    }
-                </div>
             }
         </div>
     );

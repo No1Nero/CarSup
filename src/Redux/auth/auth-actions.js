@@ -13,6 +13,8 @@ const getCurrentUserSuccess = createAction('auth/getCurrentUserSuccess');
 const resetError = createAction('auth/resetError');
 const registerMessage = createAction('auth/registerMessage');
 
+const selectPage = createAction('page/selectPage');
+
 const authActions = {
     registerSuccess,
     registerError,
@@ -22,6 +24,7 @@ const authActions = {
     getCurrentUserSuccess,
     resetError,
     registerMessage,
+    selectPage,
 };
 
 export default authActions;

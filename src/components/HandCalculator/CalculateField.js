@@ -12,7 +12,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
     
     useEffect(() => {
         if (chosenId === 1) {
-            if (!carPrice || !carEngineValue || !carEngineType || carYear) {
+            if (!carPrice || !carEngineValue || !carEngineType || !carYear) {
                 setError("Введите все необходимые данные");
             } else {
                 let basebid;
@@ -81,7 +81,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
     }, [carEngineType, carEngineValue, carPrice, carYear, chosenId, electroCarPower, motoEngineValue]);
 
     return (
-        <div>
+        <div className={s.wrapper}>
             {error ? 
                 <p className={s.error}>{error}</p> : 
                 <>
@@ -90,7 +90,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
                         <label className={s.label_label}>НДС</label>
                     </section>
                     <section className={s.section_value}>
-                        <label>{nds} $</label>
+                        <label>{nds.toFixed(2)} $</label>
                     </section>
                 </section>
                 <section className={s.info_section}>
@@ -98,7 +98,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
                         <label className={s.label_label}>Пошлина</label>
                     </section>
                     <section className={s.section_value}>
-                        <label>{duty} $</label>
+                        <label>{duty.toFixed(2)} $</label>
                     </section>
                 </section>
                 <section className={s.info_section}>
@@ -106,7 +106,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
                         <label className={s.label_label}>Акцизный сбор</label>
                     </section>
                     <section className={s.section_value}>
-                        <label>{excise} $</label>
+                        <label>{excise.toFixed(2)} $</label>
                     </section>
                 </section>
                 <section className={s.info_section}>
@@ -114,7 +114,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
                         <label className={s.label_custom}>Всего таможенных платежей</label>
                     </section>
                     <section className={s.section_value}>
-                        <label className={s.label_value_duty}>{allCustomDuty} $</label>
+                        <label className={s.label_value_duty}>{allCustomDuty.toFixed(2)} $</label>
                     </section>
                 </section>
                 <section className={s.info_section}>
@@ -122,7 +122,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
                         <label className={s.label_custom}>Полная стоимость с растаможиванием</label>
                     </section>
                     <section className={s.section_value_last_child}>
-                        <label className={s.label_value_duty}>{finalCost} $</label>
+                        <label className={s.label_value_duty}>{finalCost.toFixed(2)} $</label>
                     </section>
                 </section>
                 </>

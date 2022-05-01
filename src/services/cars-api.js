@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const fetchAllCars = ({setState}) => {
-    axios.get(`https://carsup.herokuapp.com/cars/all?pageNo=0`)
+const fetchAllCars = ({setState, pageNumber}) => {
+    axios.get(`https://carsup.herokuapp.com/cars/all?pageNo=${pageNumber}`)
     .then(({data}) => setState(data));
 };
 
@@ -18,11 +18,6 @@ const fetchCar = ({id, setState, token}) => {
             "Authorization": authToken,
         },
     })
-    .then(({data}) => setState(data));
-};
-
-const countCars = ({setState}) => {
-    axios.get('https://carsup.herokuapp.com/cars/count')
     .then(({data}) => setState(data));
 };
 
@@ -86,7 +81,6 @@ const removeCarFromFavourite = ({idCar, token, setState}) => {
 const carsApi = {
     fetchAllCars,
     fetchCar,
-    countCars,
     fetchVehicleTypes,
     fetchFuelTypes,
     addCarToFavourite,

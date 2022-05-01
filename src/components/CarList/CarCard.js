@@ -18,7 +18,7 @@ export default function CarCard({brand, img, carLink, vehicleType, engine, carYe
                 </section>
                 <section className={s.section}>
                     <label>Объем двигателя:</label>
-                    <label>{engine} L</label>
+                    <label>{engine && engine.toFixed(1)} L</label>
                 </section>
                 <section className={s.section}>
                     <label>Год выпуска:</label>
@@ -26,7 +26,7 @@ export default function CarCard({brand, img, carLink, vehicleType, engine, carYe
                 </section>
                 <section className={s.section}>
                     <label>Пробег:</label>
-                    <label>{odometrValue} км</label>
+                    <label>{odometrValue} mi</label>
                 </section>
             </div>
         </div>

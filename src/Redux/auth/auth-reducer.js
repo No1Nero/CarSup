@@ -26,10 +26,15 @@ const message = createReducer(null, {
     [authActions.resetError]: () => null,
 });
 
+const page = createReducer(0, {
+    [authActions.selectPage]: (_, {payload}) => payload,
+})
+
 const authReducer = combineReducers({
     user,
     error,
     message,
+    page,
 });
 
 export default authReducer;

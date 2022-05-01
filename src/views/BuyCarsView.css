@@ -7,7 +7,11 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9216', endColorstr='#ffffff',GradientType=1 );
 }
 .buyNow__title{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    width: 100vw;
 }
 .buyNow__content{
     display: flex;
@@ -37,4 +41,25 @@
     opacity: 0;
     transform: translateX(-100%);
     transition: all 300ms linear;
+}
+.buy_cars_ul{
+    width: 100%;
+    text-align: center;
+}
+.buy_cars_page{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(255,146,22);
+    background-color: #fff;
+    color: rgb(255,146,22);
+    font-size: 20px;
+}
+.buy_cars_chosen_page{
+    background-color: rgb(255,146,22);
+    color: #000;
 }
