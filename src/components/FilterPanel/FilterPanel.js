@@ -94,7 +94,7 @@ export default function FilterPanel({setCredentials, setCarsFetchId}) {
             andOperator = '';
         }
 
-        const filterString = `(buyNowPrice>${carPriceMinValue} AND buyNowPrice<${carPriceMaxValue}) AND (carYear>${carYearMinValue} AND carYear<${carYearMaxValue}) AND (odometrValue>${carOdometrMinValue} AND odometrValue<${carOdometrMaxValue}) AND (engine>${engineSizeMinValue} AND engine<${engineSizeMaxValue}) AND ${onStringVehicleType} ${andOperator} ${onStringFuelType}`;
+        const filterString = `((buyNowPrice>${carPriceMinValue} OR buyNowPrice:${carPriceMinValue}) AND (buyNowPrice<${carPriceMaxValue} OR buyNowPrice:${carPriceMaxValue})) AND ((carYear>${carYearMinValue} OR carYear:${carYearMinValue}) AND (carYear<${carYearMaxValue} OR carYear:${carYearMaxValue})) AND ((odometrValue>${carOdometrMinValue} OR odometrValue:${carOdometrMinValue}) AND (odometrValue<${carOdometrMaxValue} OR odometrValue:${carOdometrMinValue})) AND ((engine>${engineSizeMinValue} OR engine:${engineSizeMinValue}) AND (engine<${engineSizeMaxValue} OR engine:${engineSizeMaxValue})) AND ${onStringVehicleType} ${andOperator} ${onStringFuelType}`;
         setCarsFetchId(77777);
         setCredentials(filterString);
     };
