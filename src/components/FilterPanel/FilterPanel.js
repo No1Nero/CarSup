@@ -6,7 +6,7 @@ import Slider from "./Slider";
 export default function FilterPanel({setCredentials, setCarsFetchId}) {
     const [filterVehicleType, setFilterVehicleType] = useState('');
     const [filterFuelType, setFilterFuelType] = useState('');
-    const [engineSizeMinValue, setEngineSizeMinValue] = useState('1');
+    const [engineSizeMinValue, setEngineSizeMinValue] = useState('0');
     const [engineSizeMaxValue, setEngineSizeMaxValue] = useState('8');
     const [carYearMinValue, setCarYearMinValue] = useState('1970');
     const [carYearMaxValue, setCarYearMaxValue] = useState('2021');
@@ -132,7 +132,7 @@ export default function FilterPanel({setCredentials, setCarsFetchId}) {
                                 </section>
                             </div>
                         </section>
-                        <Slider absMin={1} absMax={8} step={1} min={engineSizeMinValue} max={engineSizeMaxValue} OnMinChange={setEngineSizeMinValue} OnMaxChange={setEngineSizeMaxValue} />
+                        <Slider absMin={0} absMax={8} step={1} min={engineSizeMinValue} max={engineSizeMaxValue} OnMinChange={setEngineSizeMinValue} OnMaxChange={setEngineSizeMaxValue} />
                     </section>
                     <section className={s.section}>
                         <label className={s.label}>Тип топлива</label>
