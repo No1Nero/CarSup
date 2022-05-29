@@ -38,9 +38,6 @@ export default function ProfileView() {
                 </div>
             </div>
             <div className={s.calculate_wrapper}>
-                <form action="/recommendation">
-                    <button className={s.button}>Рекомендации</button>
-                </form>
                 <form action="/chosen">
                     <button className={s.button}>Избранное</button>
                 </form>

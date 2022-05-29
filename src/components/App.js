@@ -8,7 +8,6 @@ const BuyCarsView = lazy(() => import ('../views/BuyCarsView'));
 const ProfileView = lazy(() => import ('../views/ProfileView'));
 const CompanyView = lazy(() => import ('../views/CompanyView'));
 const CarDetailsView = lazy(() => import ('../views/CarDetailsView'));
-const RecommendationView = lazy(() => import ('../views/RecommendationView'));
 const ChosenView = lazy(() => import ('../views/ChosenView'));
 
 const App = () => {
@@ -24,8 +23,6 @@ const App = () => {
                         <Route path="/autos/:id" element={<CarDetailsView />} />
                         <Route path="/company" element={<CompanyView />} />
                         <Route path="/profile" element={token ? <ProfileView /> : <Navigate replace to='/' />} />
-                        <Route path="/recommendation" element={token ? <RecommendationView /> : <Navigate replace to='/'/>} />
-                        <Route path="/recommendation/:id" element={token ? <CarDetailsView /> : <Navigate replace to='/' />} />
                         <Route path="/chosen" element={token ? <ChosenView /> : <Navigate replace to='/'/>} />
                         <Route path="/chosen/:id" element={token ? <CarDetailsView /> : <Navigate replace to='/' />} />
                     </Route>

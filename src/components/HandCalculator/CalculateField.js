@@ -81,7 +81,7 @@ export default function CalculateField({chosenId, carPrice, carEngineValue, carE
     }, [carEngineType, carEngineValue, carPrice, carYear, chosenId, electroCarPower, motoEngineValue]);
 
     return (
-        <div className={s.wrapper}>
+        <div>
             {error ? 
                 <p className={s.error}>{error}</p> : 
                 <>

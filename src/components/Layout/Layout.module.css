@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid rgb(255, 146, 22);
-    height: 10vh;
+    padding: 0 15px;
+    height: 11vh;
     background: url('../../img/layout.png');
 }
 .img_wrapper{
