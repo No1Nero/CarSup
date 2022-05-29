@@ -1,6 +1,7 @@
 .wrapper{
     display: flex;
     padding: 40px 100px 20px 30px;
+    height: 82vh;
     justify-content: space-between;
     background: rgb(255,255,255);
     background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 37%, rgba(249,249,114,1) 69%, rgba(255,146,22,1) 100%);
