@@ -14,6 +14,7 @@
     width: 370px;
     height: 400px;
     background-color: #fff;
+    margin: 22px 0;
 }
 .header_wrapper{
     display: flex;
