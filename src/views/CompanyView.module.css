@@ -1,6 +1,6 @@
 .wrapper{
     display: flex;
-    width: 88.6vh;
+    height: 88.6vh;
     padding: 40px 100px 20px 30px;
     justify-content: space-between;
     background: rgb(255,255,255);
