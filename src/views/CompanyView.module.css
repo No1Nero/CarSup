@@ -28,8 +28,8 @@
 .left_info{
     border: 3px solid rgb(255, 146, 22);
     border-radius: 15px;
-    width: 90%;
-    height: 400px;
+    width: 520px;
+    height: 350px;
     background-color: #fff;
 }
 .left_header_wrapper{
@@ -65,8 +65,8 @@
 .info_box{
     border: 3px solid rgb(255, 146, 22);
     border-radius: 15px;
-    width: 50vh;
-    height: 270px;
+    width: 470px;
+    height: 250px;
     margin-left: auto;
     margin-right: 0;
     margin-bottom: 10px;
