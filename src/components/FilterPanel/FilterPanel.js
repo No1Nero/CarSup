@@ -11,7 +11,7 @@ export default function FilterPanel({setCredentials, setCarsFetchId}) {
     const [carYearMinValue, setCarYearMinValue] = useState('1970');
     const [carYearMaxValue, setCarYearMaxValue] = useState('2021');
     const [carPriceMinValue, setCarPriceMinvalue] = useState('500');
-    const [carPriceMaxValue, setCarPriceMaxvalue] = useState('30000');
+    const [carPriceMaxValue, setCarPriceMaxvalue] = useState('100000');
     const [carOdometrMinValue, setCarOdometrMinValue] = useState('0');
     const [carOdometrMaxValue, setCarOdometrMaxValue] = useState('999999');
 
@@ -76,8 +76,14 @@ export default function FilterPanel({setCredentials, setCarsFetchId}) {
         let onStringVehicleType;
         let onStringFuelType;
         let andOperator;
+        let filteredVehicleType;
         if (filterVehicleType) {
-            onStringVehicleType = `vehicleType:${filterVehicleType}`;
+            if (filterVehicleType.includes(' ')) {
+                filteredVehicleType = filterVehicleType.split(' ')[0] + "*";
+            } else {
+                filteredVehicleType = filterVehicleType;
+            }
+            onStringVehicleType = `vehicleType:${filteredVehicleType}`;
         } else {
             onStringVehicleType = '';
         }
@@ -176,7 +182,7 @@ export default function FilterPanel({setCredentials, setCarsFetchId}) {
                                 </section>
                             </div>
                         </section>
-                        <Slider absMin={500} absMax={30000} step={1} min={carPriceMinValue} max={carPriceMaxValue} OnMinChange={setCarPriceMinvalue} OnMaxChange={setCarPriceMaxvalue} />
+                        <Slider absMin={500} absMax={100000} step={1} min={carPriceMinValue} max={carPriceMaxValue} OnMinChange={setCarPriceMinvalue} OnMaxChange={setCarPriceMaxvalue} />
                     </section>
                     <section className={s.wraper_with_slider}>
                         <section className={s.section_with_slider}>
