@@ -7,27 +7,27 @@ export default function CarConditionInfo({car}) {
     return (
         <div className={s.wrapper_conditional}>
             <div className={s.header_container}>
-                <h2 className={s.h2}>Состояние автобомиля</h2>
+                <h2 className={s.h2}>Стан автомобіля</h2>
             </div>
             <div className={s.container}>
                 <section className={s.section}>
-                    <label>Общее состояние:</label>
+                    <label>Загальний стан:</label>
                     <label>{conditionValue}</label>
                 </section>
                 <section className={s.section}>
-                    <label>Главные повреждения:</label>
+                    <label>Головні пошкодження:</label>
                     <label>{primaryDamage}</label>
                 </section>
                 <section className={s.section}>
-                    <label>Вторичные повреждения:</label>
+                    <label>Вторинні пошкодження:</label>
                     <label>{secondaryDamage}</label>
                 </section>
                 <section className={s.section}>
-                    <label>Пробег:</label>
+                    <label>Пробіг:</label>
                     <label>{odometrValue} mi</label>
                 </section>
                 <section className={s.section}>
-                    <label>Расположение:</label>
+                    <label>Розташування:</label>
                     <label>{location}</label>
                 </section>
             </div>

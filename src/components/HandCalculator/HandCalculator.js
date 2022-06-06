@@ -4,9 +4,9 @@ import CalculateField from './CalculateField';
 import './HandCalculator.css';
 
 const categories = [
-    {title: 'Легковые', id: 1},
-    {title: 'Электро', id: 2},
-    {title: 'Гибрид', id: 3},
+    {title: 'Легкові', id: 1},
+    {title: 'Електро', id: 2},
+    {title: 'Гібрид', id: 3},
     {title: 'Мото', id: 4},
 ];
 
@@ -79,15 +79,15 @@ export default function HandCalculator() {
                 {chosenId === 1 && 
                     <>
                     <section className='calculator_section_value'>
-                        <label>Стоимость автомобиля, USD</label>
+                        <label>Вартість автомобіля, USD</label>
                         <input className='calculator_input' onChange={handleChange} value={carPrice} name='carPrice' type="number"></input>
                     </section>
                     <section className='calculator_section_value'>
-                        <label>Объем двигателя, куб.дм</label>
+                        <label>Об'єм двигуна, куб.дм</label>
                         <input className='calculator_input' onChange={handleChange} value={carEngineValue} name='carEngineValue' type="number"></input>
                     </section>
                     <section className='calculator_section_value'>
-                        <label>Тип двигателя</label>
+                        <label>Тип двигуна</label>
                         <div className='calculator_radio_wrapper'>
                             <section>
                                 <input onChange={handleChange} value="Бензин" name='carEngineType' type="radio"></input>
@@ -100,7 +100,7 @@ export default function HandCalculator() {
                         </div>
                     </section>
                     <section className='calculator_section_value'>
-                        <label>Год выпуска</label>
+                        <label>Рік випуску</label>
                         <input className='calculator_input' onChange={handleChange} value={carYear} name='carYear' type="number"></input>
                     </section>
                     </>
@@ -108,11 +108,11 @@ export default function HandCalculator() {
                 {chosenId === 2 && 
                     <>
                     <section className='calculator_section_value'>
-                        <label>Стоимость автомобиля, USD</label>
+                        <label>Вартість автомобіля, USD</label>
                         <input className='calculator_input' onChange={handleChange} value={carPrice} name='carPrice' type="number"></input>
                     </section>
                     <section className='calculator_section_value'>
-                        <label>Мощность, кВт</label>
+                        <label>Потужність, кВт</label>
                         <input className='calculator_input' onChange={handleChange} value={electroCarPower} name='electroCarPower' type="number"></input>
                     </section>
                     </>
@@ -120,7 +120,7 @@ export default function HandCalculator() {
                 {chosenId === 3 && 
                     <>
                     <section className='calculator_section_value'>
-                        <label>Стоимость автомобиля, USD</label>
+                        <label>Вартість автомобіля, USD</label>
                         <input className='calculator_input' onChange={handleChange} value={carPrice} name='carPrice' type="number"></input>
                     </section>
                     </>
@@ -128,16 +128,16 @@ export default function HandCalculator() {
                 {chosenId === 4 && 
                     <>
                     <section className='calculator_section_value'>
-                        <label>Стоимость автомобиля, USD</label>
+                        <label>Вартість автомобіля, USD</label>
                         <input className='calculator_input' onChange={handleChange} value={carPrice} name='carPrice' type="number"></input>
                     </section>
                     <section className='calculator_section_value'>
-                        <label>Объем двигателя, куб.см</label>
+                        <label>Об'єм двигуна, куб.см</label>
                         <input className='calculator_input' onChange={handleChange} value={motoEngineValue} name='motoEngineValue' type="number"></input>
                     </section>
                     </>
                 }
-                <button onClick={() => setCalculateToggler(true)} className='calculator_submit_button' type='button'>Рассчитать</button>
+                <button onClick={() => setCalculateToggler(true)} className='calculator_submit_button' type='button'>Розрахувати</button>
             </div>
             {calculateToggler && 
                 <CalculateField 

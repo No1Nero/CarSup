@@ -5,9 +5,9 @@ const register = credentials => async dispatch => {
     try{
         await axios.post('https://carsup.herokuapp.com/cars/auth/register', credentials);
         dispatch(authActions.registerSuccess());
-        dispatch(authActions.registerMessage('Регистрация успешна. Авторизуйтесь для входа в профиль'));
+        dispatch(authActions.registerMessage('Регістрація успішна. Авторизуйтеся для входу в профіль'));
     } catch(error) {
-        dispatch(authActions.registerError('Данный пользователь уже зарегистрирован'));
+        dispatch(authActions.registerError('Даний користувач вже зареєстрован'));
     }
 };
 
@@ -16,7 +16,7 @@ const login = credentials => async dispatch => {
         const response = await axios.post('https://carsup.herokuapp.com/cars/auth/login', credentials);
         dispatch(authActions.loginSuccess(response.data));
     } catch(error) {
-        dispatch(authActions.loginError('Неверный логин или пароль'));
+        dispatch(authActions.loginError('Невірний логін або пароль'));
     }
 };
 

@@ -57,21 +57,21 @@ export default function Registration() {
 
     return (
         <div className={s.form_wrapper}>
-            <h2>Регистрация</h2>
+            <h2>Регістрація</h2>
             <form className={s.form} onSubmit={handleSubmit}>
                 {message && <p className={s.message}>{message}</p>}
                 {error && <p className={s.error}>{error}</p>}
-                <p className={s.p}>Имя</p>
+                <p className={s.p}>Ім'я</p>
                 <input className={s.input} onChange={handleChange} type="text" name="name" value={name} placeholder="Введите имя"></input>
                 <p className={s.p}>Почта</p>
                 <input className={s.input} onChange={handleChange} type="email" name="email" value={email} placeholder="Введите почту"></input>
                 <p className={s.p}>Пароль</p>
                 <input className={s.input} onChange={handleChange} type="password" name="password" value={password} placeholder="Введите пароль"></input>
-                {password.length < 6 && <p className={s.alert}>Пароль должен состоять минимум из 6 символов</p>}
-                <p className={s.p}>Повторите пароль</p>
+                {password.length < 6 && <p className={s.alert}>Пароль повинен складатися мінімум з 6 символів</p>}
+                <p className={s.p}>Повторіть пароль</p>
                 <input className={s.input} onChange={handleChange} type="password" name="confirmPassword" value={confirmPassword} placeholder="Повторите пароль"></input>
-                {password !== confirmPassword && <p className={s.alert}>Пароли должны совпадать</p>}
-                <button className={s.button} type="submit" disabled={password !== confirmPassword || !password || !confirmPassword} >Зарегистрироваться</button>
+                {password !== confirmPassword && <p className={s.alert}>Паролі повинні співпадати</p>}
+                <button className={s.button} type="submit" disabled={password !== confirmPassword || !password || !confirmPassword} >Зареєструватися</button>
             </form>
         </div>
     );

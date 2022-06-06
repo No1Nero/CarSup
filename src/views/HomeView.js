@@ -26,19 +26,19 @@ export default function HomeView() {
         <div>
             <section className={s.section_button}>
                 <form className={s.form_button} action="/autos">
-                    <button className={s.button}>Выбрать авто</button>
+                    <button className={s.button}>Вибрати авто</button>
                 </form>
             </section> 
             <div>
                 {token ?
                     <section className={s.section_authed}>
                         <img alt="#" src={profile} />
-                        <h2 className={s.h2_authed}>Добро пожаловать, {username}</h2>
+                        <h2 className={s.h2_authed}>Ласкаво просимо, {username}</h2>
                     </section> :
                     <section  className={s.home_auth_div}>
                         <div className={s.div_buttons}>
-                            <button className={s.toggle_left_button} disabled={toggle === true} type="button" onClick={toggleChanger}>Регистрация</button>
-                            <button className={s.toggle_right_button} disabled={toggle === false} type="button" onClick={toggleChanger}>Авторизация</button>
+                            <button className={s.toggle_left_button} disabled={toggle === true} type="button" onClick={toggleChanger}>Регістрація</button>
+                            <button className={s.toggle_right_button} disabled={toggle === false} type="button" onClick={toggleChanger}>Авторизація</button>
                         </div>
                         {toggle ? <Registration /> : <Authorization />}
                     </section>

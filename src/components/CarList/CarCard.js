@@ -13,19 +13,19 @@ export default function CarCard({brand, img, carLink, vehicleType, engine, carYe
             </div>
             <div className={s.card_info_container}>
                 <section className={s.section}>
-                    <label>Тип ТС:</label>
+                    <label>Тип ТЗ:</label>
                     <label>{vehicleType}</label>
                 </section>
                 <section className={s.section}>
-                    <label>Объем двигателя:</label>
+                    <label>Об'єм двигуна:</label>
                     <label>{engine && engine.toFixed(1)} L</label>
                 </section>
                 <section className={s.section}>
-                    <label>Год выпуска:</label>
+                    <label>Рік випуску:</label>
                     <label>{carYear}</label>
                 </section>
                 <section className={s.section}>
-                    <label>Пробег:</label>
+                    <label>Пробіг:</label>
                     <label>{odometrValue} mi</label>
                 </section>
             </div>

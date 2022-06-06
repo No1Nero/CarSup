@@ -16,16 +16,16 @@ export default function Layout() {
                 <NavLink to='/'><img className={s.logo} alt="#" src={logo} /></NavLink>
             </div>
             <div className={s.navigation}>
-                <NavLink className={s.navlink} to='/'>Главная</NavLink>
+                <NavLink className={s.navlink} to='/'>Головна</NavLink>
                 <NavLink className={s.navlink} to='/autos'>Каталог авто</NavLink>
-                <NavLink className={s.navlink} to='/company'>О компании</NavLink>
+                <NavLink className={s.navlink} to='/company'>Про компанію</NavLink>
                 {token ? 
                     <div className={s.profile_div}>
                         <NavLink className={s.profile_link} to='/profile'><img className={s.profile_img} alt="#" src={profile} /></NavLink>
                         <NavLink className={s.profile_username} to='/profile'>{username}</NavLink>
                     </div> : 
                     <form className={s.form} action="/">
-                        <button className={s.login_button}>Войти</button>
+                        <button className={s.login_button}>Увійти</button>
                     </form>
                 }
                 

@@ -20,11 +20,11 @@ export default function ProfileView() {
                 <img className={s.img} alt="#" src={profile} />
                 <div className={s.user_info}>
                     <div className={s.header_wrapper}>
-                        <h2 className={s.h2}>Личная информация</h2>
+                        <h2 className={s.h2}>Особиста інформація</h2>
                     </div>
                     <div className={s.user_card}>
                         <section className={s.section}>
-                            <label className={s.label_name}>Имя пользователя:</label>
+                            <label className={s.label_name}>Ім'я користувача:</label>
                             <label className={s.label_value}>{username}</label>
                         </section>
                         <section className={s.section}>
@@ -34,12 +34,12 @@ export default function ProfileView() {
                     </div>
                 </div>
                 <div>
-                    <button type="button" onClick={logout} className={s.profile_button}>Выйти из профиля</button>
+                    <button type="button" onClick={logout} className={s.profile_button}>Вийти з профілю</button>
                 </div>
             </div>
             <div className={s.calculate_wrapper}>
                 <form action="/chosen">
-                    <button className={s.button}>Избранное</button>
+                    <button className={s.button}>Обране</button>
                 </form>
                 <div className={s.calculate}>
                     <HandCalculator />

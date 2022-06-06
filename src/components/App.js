@@ -15,7 +15,7 @@ const App = () => {
 
     return (
         <div>
-            <Suspense fallback={<p>Загрузка...</p>}>
+            <Suspense fallback={<p>Завантаження...</p>}>
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<HomeView />}/>

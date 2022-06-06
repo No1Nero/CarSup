@@ -43,14 +43,14 @@ export default function Authorization() {
 
     return (
         <div className={s.form_wrapper}>
-            <h2>Авторизация</h2>
+            <h2>Авторизація</h2>
             <form className={s.form} onSubmit={handleSubmit}>
                 {error && <p className={s.error}>{error}</p>}
-                <p className={s.p}>Имя</p>
+                <p className={s.p}>Ім'я</p>
                 <input className={s.input} onChange={handleChange} type="text" name="name" value={name} placeholder="Введите имя"></input>
                 <p className={s.p}>Пароль</p>
                 <input className={s.input} onChange={handleChange} type="password" name="password" value={password} placeholder="Введите пароль"></input>
-                <button className={s.button} type="submit" disabled={!name || !password} >Войти</button>
+                <button className={s.button} type="submit" disabled={!name || !password} >Увійти</button>
             </form>
         </div>
     );

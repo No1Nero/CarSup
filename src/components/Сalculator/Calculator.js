@@ -18,7 +18,7 @@ export default function Calculator({car}) {
 
     useEffect (() => {
         if (!engine || !fuelType || ! vehicleType || !carYear || !buyNowPrice) {
-            setError('Остутсвуют необходимые данные');
+            setError('Відсутні необхідні дані');
             return;
         } else {
             if (vehicleType === 'Automobile') {
@@ -79,7 +79,7 @@ export default function Calculator({car}) {
                     setAllCustomDuty(otherCustomDuty);
                     setFinalCost(Number(buyNowPrice) + otherCustomDuty);
                 } else if (fuelType === 'Unknown') {
-                    setError('Остутсвуют необходимые данные');
+                    setError('Відсутні необхідні дані');
                 }
             } else if (vehicleType === 'Truck') {
                 let basebid = 230.4;
@@ -136,31 +136,31 @@ export default function Calculator({car}) {
             {token ?
                 <>
                 <div className={s.header_container}>
-                    <h2 className={s.h2}>Расчёт стоимости растаможивания</h2>
+                    <h2 className={s.h2}>Розрахунок вартості розтаможування</h2>
                 </div>
                 <div className={s.container}>
                     <section className={s.section}>
-                        <label>Тип транспортного средства:</label>
+                        <label>Тип транспортного засобу:</label>
                         <label>{vehicleType ? vehicleType : '—'}</label>
                     </section>
                     <section className={s.section}>
-                        <label>Тип двигателя:</label>
+                        <label>Тип двигуна:</label>
                         <label>{fuelType ? fuelType : '—'}</label>
                     </section>
                     <section className={s.section}>
-                        <label>Объем двигаетля:</label>
+                        <label>Об'єм двигуна:</label>
                         <label>{engine ? engine : '—'} L</label>
                     </section>
                     <section className={s.section}>
-                        <label>Год выпуска:</label>
+                        <label>Рік випуску:</label>
                         <label>{carYear ? carYear : '—'}</label>
                     </section>
                     <section className={s.section}>
-                        <label>Цена покупки:</label>
+                        <label>Ціна придбання:</label>
                         <label>{buyNowPrice ? buyNowPrice : '—'} $</label>
                     </section>
                 </div>
-                {!toggler && <button className={s.button} onClick={() => setToggler(true)} type="button">Рассчитать</button>}
+                {!toggler && <button className={s.button} onClick={() => setToggler(true)} type="button">Розрахувати</button>}
                 {toggler &&
                     <div className={s.calculated_container}>
                         {error ? 
@@ -168,7 +168,7 @@ export default function Calculator({car}) {
                             <>
                             <section className={s.info_section}>
                                 <section className={s.section_label}>
-                                    <label className={s.label_label}>НДС</label>
+                                    <label className={s.label_label}>ПДВ</label>
                                 </section>
                                 <section className={s.section_value}>
                                     <label>{nds.toFixed(2)} $</label>
@@ -176,7 +176,7 @@ export default function Calculator({car}) {
                             </section>
                             <section className={s.info_section}>
                                 <section className={s.section_label}>
-                                    <label className={s.label_label}>Пошлина</label>
+                                    <label className={s.label_label}>Податок</label>
                                 </section>
                                 <section className={s.section_value}>
                                     <label>{duty.toFixed(2)} $</label>
@@ -184,7 +184,7 @@ export default function Calculator({car}) {
                             </section>
                             <section className={s.info_section}>
                                 <section className={s.section_label}>
-                                    <label className={s.label_label}>Акцизный сбор</label>
+                                    <label className={s.label_label}>Акцизний сбір</label>
                                 </section>
                                 <section className={s.section_value}>
                                     <label>{excise.toFixed(2)} $</label>
@@ -192,7 +192,7 @@ export default function Calculator({car}) {
                             </section>
                             <section className={s.info_section}>
                                 <section className={s.section_label}>
-                                    <label className={s.label_custom}>Всего таможенных платежей</label>
+                                    <label className={s.label_custom}>Усього митних платежів</label>
                                 </section>
                                 <section className={s.section_value}>
                                     <label className={s.label_value_duty}>{allCustomDuty.toFixed(2)} $</label>
@@ -200,7 +200,7 @@ export default function Calculator({car}) {
                             </section>
                             <section className={s.info_section}>
                                 <section className={s.section_label}>
-                                    <label className={s.label_custom}>Полная стоимость с растаможиванием</label>
+                                    <label className={s.label_custom}>Повна вартість з розтаможуванням</label>
                                 </section>
                                 <section className={s.section_value_last_child}>
                                     <label className={s.label_value_duty}>{finalCost.toFixed(2)} $</label>
