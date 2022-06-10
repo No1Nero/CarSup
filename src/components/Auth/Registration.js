@@ -57,13 +57,13 @@ export default function Registration() {
 
     return (
         <div className={s.form_wrapper}>
-            <h2>Регістрація</h2>
+            <h2>Реєстрація</h2>
             <form className={s.form} onSubmit={handleSubmit}>
                 {message && <p className={s.message}>{message}</p>}
                 {error && <p className={s.error}>{error}</p>}
                 <p className={s.p}>Ім'я</p>
                 <input className={s.input} onChange={handleChange} type="text" name="name" value={name} placeholder="Введите имя"></input>
-                <p className={s.p}>Почта</p>
+                <p className={s.p}>Пошта</p>
                 <input className={s.input} onChange={handleChange} type="email" name="email" value={email} placeholder="Введите почту"></input>
                 <p className={s.p}>Пароль</p>
                 <input className={s.input} onChange={handleChange} type="password" name="password" value={password} placeholder="Введите пароль"></input>

@@ -37,7 +37,7 @@ export default function HomeView() {
                     </section> :
                     <section  className={s.home_auth_div}>
                         <div className={s.div_buttons}>
-                            <button className={s.toggle_left_button} disabled={toggle === true} type="button" onClick={toggleChanger}>Регістрація</button>
+                            <button className={s.toggle_left_button} disabled={toggle === true} type="button" onClick={toggleChanger}>Реєстрація</button>
                             <button className={s.toggle_right_button} disabled={toggle === false} type="button" onClick={toggleChanger}>Авторизація</button>
                         </div>
                         {toggle ? <Registration /> : <Authorization />}
