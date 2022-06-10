@@ -62,14 +62,14 @@ export default function Registration() {
                 {message && <p className={s.message}>{message}</p>}
                 {error && <p className={s.error}>{error}</p>}
                 <p className={s.p}>Ім'я</p>
-                <input className={s.input} onChange={handleChange} type="text" name="name" value={name} placeholder="Введите имя"></input>
+                <input className={s.input} onChange={handleChange} type="text" name="name" value={name} placeholder="Введіть ім'я"></input>
                 <p className={s.p}>Пошта</p>
-                <input className={s.input} onChange={handleChange} type="email" name="email" value={email} placeholder="Введите почту"></input>
+                <input className={s.input} onChange={handleChange} type="email" name="email" value={email} placeholder="Введіть пошту"></input>
                 <p className={s.p}>Пароль</p>
-                <input className={s.input} onChange={handleChange} type="password" name="password" value={password} placeholder="Введите пароль"></input>
+                <input className={s.input} onChange={handleChange} type="password" name="password" value={password} placeholder="Введіть пароль"></input>
                 {password.length < 6 && <p className={s.alert}>Пароль повинен складатися мінімум з 6 символів</p>}
                 <p className={s.p}>Повторіть пароль</p>
-                <input className={s.input} onChange={handleChange} type="password" name="confirmPassword" value={confirmPassword} placeholder="Повторите пароль"></input>
+                <input className={s.input} onChange={handleChange} type="password" name="confirmPassword" value={confirmPassword} placeholder="Повторіть пароль"></input>
                 {password !== confirmPassword && <p className={s.alert}>Паролі повинні співпадати</p>}
                 <button className={s.button} type="submit" disabled={password !== confirmPassword || !password || !confirmPassword} >Зареєструватися</button>
             </form>
